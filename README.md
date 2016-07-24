@@ -4,6 +4,8 @@ Light weight captcha image generator for php based web projects. It consists of 
 
 
 ![Outline capture default](/samples/default1.png "Default 1")
+![Outline capture default](/samples/default2.png "Default 2")
+![Outline capture default](/samples/default3.png "Default 3")
 
 
 
