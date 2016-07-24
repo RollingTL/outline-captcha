@@ -20,7 +20,21 @@ One can adjust generated string length, resulting image size in pixels, text col
 | ------------- |:-------------:| -----:|
 | sample 4      | sample 5 | sample 6 | 
 
+## How to use
+```php
+$captchaOptions = [
+            "width"=>150,
+            "height"=>100,
+            "length"=>3,
+            "fileType"=>"png",
+            "color"=>'rgb(133, 244, 199)',
+            "background"=>'rgb(33, 77, 77)'
+        ];
 
+        $captcha =  $this->app->make('Captcha', [$captchaOptions]);
+
+        $captchaInfo = $captcha->createCaptchaImage();
+```
 
 ## License
 The Outline Captcha utility is open-sourced software licensed under the MIT license.
