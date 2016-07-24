@@ -21,6 +21,30 @@ One can adjust generated string length, resulting image size in pixels, text col
 | sample 4      | sample 5 | sample 6 | 
 
 ## How to use
+PHP in general
+```php
+$captcha =  new OutlineCaptcha;
+$captcha->setFontPath('/path/to/fonts'); 
+$captchaInfo = $captcha->createCaptchaImage();
+
+$captchaString = $captchaInfo["string"];
+$captchaData = $captchaInfo["image"];
+```
+```php
+<img src="<?php $captchaImage !!}?>"/>
+```
+Laravel
+```php
+$captcha =  $this->app->make('OutlineCaptcha');
+$captchaInfo = $captcha->createCaptchaImage();
+
+$captchaString = $captchaInfo["string"];
+$captchaData = $captchaInfo["image"];
+```
+```php
+<img src="{!! $captchaImage !!}"/>
+```
+
 ```php
 $captchaOptions = [
             "width"=>150,
@@ -31,9 +55,9 @@ $captchaOptions = [
             "background"=>'rgb(33, 77, 77)'
         ];
 
-        $captcha =  $this->app->make('Captcha', [$captchaOptions]);
+$captcha =  $this->app->make('OutlineCaptcha', [$captchaOptions]);
 
-        $captchaInfo = $captcha->createCaptchaImage();
+$captchaInfo = $captcha->createCaptchaImage();
 ```
 
 ## License
