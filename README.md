@@ -2,7 +2,7 @@
  ![Outline capture](/samples/outline.png "title")
  
  
-Light weight captcha image generator for php based web projects. It consists of just one file and tree sample fonts. ImageMagic is used for image generation. 
+Light weight captcha image generator for php based web projects. It consists of just one file and three sample fonts. ImageMagic is used for image generation. 
 
 ## How it looks
 ### Default settings
@@ -46,7 +46,7 @@ $captchaImage = $captchaInfo["image"];
 ```php
 <img src="{!! $captchaImage !!}"/>
 ```
-Overridung default settings
+Overriding default settings
 ```php
 $captchaOptions = [
             "width"=>150,
@@ -62,7 +62,7 @@ $captcha =  new OutlineCaptcha($captchaOptions);
 ```
 ## How to install
 
-Copy OutlineCaptcha.php to your application classes directory. Copy outlineFonts folder to ypur application resourses.
+Copy OutlineCaptcha.php to your application classes directory. Copy outlineFonts folder to your application resources.
 For the program to know where the fonts are you should either:
 
 * Call __setFontPath__ funtion like $captcha->setFontPath('/path/to/fonts') every time you create __OutlineCaptcha__ class.
@@ -77,7 +77,7 @@ Some options can result in totally unreadable captcha image.
 * When you decrease image pixel length it is harder to read the resulting captcha and reverse. 
 * When you increase captcha string length it is harder to read the resulting captcha and reverse. 
 
-Try to use simple and disctintive colors.
+Try to use simple and distinctive colors.
 
 
 
