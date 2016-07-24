@@ -3,6 +3,7 @@
 Light weight captcha image generator for php based web projects. It consists of just one file and tree sample fonts. ImageMagic is used for image generation. 
 
 
+![Outline capture default](/samples/default1.png "Default 1")
 
 
 
