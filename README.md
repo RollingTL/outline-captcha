@@ -1,5 +1,7 @@
 #Outline Captcha
-
+ ![Outline capture](/samples/outline.png "title")
+ 
+ 
 Light weight captcha image generator for php based web projects. It consists of just one file and tree sample fonts. ImageMagic is used for image generation. 
 
 ## How it looks
