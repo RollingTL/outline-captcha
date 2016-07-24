@@ -23,12 +23,12 @@ One can adjust generated string length, resulting image size in pixels, text col
 ## How to use
 PHP in general
 ```php
-$captcha =  new OutlineCaptcha;
+$captcha =  new OutlineCaptcha();
 $captcha->setFontPath('/path/to/fonts'); 
 $captchaInfo = $captcha->createCaptchaImage();
 
 $captchaString = $captchaInfo["string"];
-$captchaData = $captchaInfo["image"];
+$captchaImage = $captchaInfo["image"];
 ```
 ```php
 <img src="<?php $captchaImage !!}?>"/>
@@ -39,12 +39,12 @@ $captcha =  $this->app->make('OutlineCaptcha');
 $captchaInfo = $captcha->createCaptchaImage();
 
 $captchaString = $captchaInfo["string"];
-$captchaData = $captchaInfo["image"];
+$captchaImage = $captchaInfo["image"];
 ```
 ```php
 <img src="{!! $captchaImage !!}"/>
 ```
-
+Overridung default settings
 ```php
 $captchaOptions = [
             "width"=>150,
@@ -54,11 +54,31 @@ $captchaOptions = [
             "color"=>'rgb(133, 244, 199)',
             "background"=>'rgb(33, 77, 77)'
         ];
-
-$captcha =  $this->app->make('OutlineCaptcha', [$captchaOptions]);
-
-$captchaInfo = $captcha->createCaptchaImage();
+$captcha =  new OutlineCaptcha($captchaOptions);
+// Laravel
+// $captcha =  $this->app->make('OutlineCaptcha', [$captchaOptions]);
 ```
+## How to install
+
+Copy OutlineCaptcha.php to your application classes directory. Copy outlineFonts folder to ypur application resourses.
+For the program to know where the fonts are you should either:
+
+* Call __setFontPath__ funtion like $captcha->setFontPath('/path/to/fonts') every time you create __OutlineCaptcha__ class.
+
+or:
+
+* Adjust the fisrt line of  __OutlineCaptcha__ class constructor. 
+
+## Some more information
+
+Some options can result in totally unreadable captcha image. 
+* When you decrease image pixel length it is harder to read the resulting captcha and reverse. 
+* When you increase captcha string length it is harder to read the resulting captcha and reverse. 
+
+Try to use simple and disctintive colors.
+
+
+
 
 ## License
 The Outline Captcha utility is open-sourced software licensed under the MIT license.
