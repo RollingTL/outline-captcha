@@ -33,7 +33,7 @@ $captchaString = $captchaInfo["string"];
 $captchaImage = $captchaInfo["image"];
 ```
 ```php
-<img src="<?php $captchaImage !!}?>"/>
+<img src="<?php $captchaImage ?>"/>
 ```
 Laravel
 ```php
